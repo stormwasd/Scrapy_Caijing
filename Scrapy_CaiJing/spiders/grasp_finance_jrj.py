@@ -26,7 +26,7 @@ class GraspFinanceJrjSpider(scrapy.Spider):
     }
 
     def start_requests(self):
-        for i in range(1, 6):
+        for i in range(1, 2):
             url = f'http://finance.jrj.com.cn/list/industrynews-{i}.shtml'
             req = scrapy.Request(url, callback=self.parse, dont_filter=True)
             yield req
